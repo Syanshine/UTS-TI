@@ -171,7 +171,7 @@ func TambahPeminjamanBuku() {
 
 func HistoriPeminjamanBuku() {
 	fmt.Println("===Histori Peminjaman Buku===")
-	for _, transaksi := range histori {
-		fmt.Println(transaksi)
+	for _, pinjaman := range histori {
+		fmt.Println(pinjaman)
 	}
 }
