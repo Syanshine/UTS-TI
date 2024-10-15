@@ -60,6 +60,7 @@ func main() {
 	}
 
 	for {
+		fmt.Println("Login sukses!!!")
 		fmt.Println("\nMenu:")
 		fmt.Println("1. Lihat Informasi Pengguna Program")
 		fmt.Println("2. Lihat Daftar Buku")
@@ -74,17 +75,17 @@ func main() {
 
 		switch pilihan {
 		case 1:
-			fmt.Println("Lihat Informasi Pengguna Program")
+			fmt.Println("===Informasi Pengguna Program===")
 			fmt.Printf("Nama: %s\nNPM: %s\nUmur: %d\nAlamat: %s\nJenis Kelamin: %s\nMakanan Favorit: %s\nMinuman Favorit: %s\n",
 				dataPengguna.Nama, dataPengguna.NPM, dataPengguna.Umur, dataPengguna.Alamat,
 				dataPengguna.JenisKelamin, dataPengguna.MakananFav, dataPengguna.MinumanFav)
 		case 2:
-			fmt.Println("Lihat Daftar Buku")
+			fmt.Println("===Daftar Buku===")
 			for _, buku := range daftarBuku {
 				fmt.Printf("Nama Buku: %s, Jumlah: %d\n", buku.NamaBuku, buku.JumlahBuku)
 			}
 		case 3:
-			fmt.Println("Tambahkan Daftar Buku")
+			fmt.Println("===Tambahkan Daftar Buku===")
 			 var namaBuku string
    			 var jumlahBuku int
    			 fmt.Print("Masukkan nama buku yang ingin ditambahkan: ")
@@ -112,6 +113,7 @@ func main() {
         }
     }
 		case 4:
+			fmt.Println("===Peminjaman Buku===")
 			var namaBuku string
 			var jumlahPinjam int
 			fmt.Print("Masukkan nama buku yang akan dipinjam: ")
@@ -136,7 +138,7 @@ func main() {
 				}
 			}
 		case 5:
-			fmt.Println("Histori Peminjaman Buku")
+			fmt.Println("===Histori Peminjaman Buku===")
 			for _, pinjaman := range histori {
 				fmt.Println(pinjaman)
 			}
